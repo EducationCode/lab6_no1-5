@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function inform(){
+        var textInput = document.getElementById("name");
+        var Name = textInput.value;
+        var textInput1 = document.getElementById("address");
+        var Address = textInput1.value;
+        var textInput2 = document.getElementById("phone");
+        var Phone = textInput2.value;
+
+        var tr = document.createElement("tr");
+
+        var ta = document.getElementById("playlist");
+        var td = document.createElement("td");
+        td.innerHTML = Name;
+        ta.appendChild(tr);
+        ta.appendChild(td);
+        
+        var ta = document.getElementById("playlist");
+        var td = document.createElement("td");
+        td.innerHTML = Address;
+        ta.appendChild(td);
+        
+        var ta = document.getElementById("playlist");
+        var td = document.createElement("td");
+        td.innerHTML = Phone;
+        ta.appendChild(td);
+        }
+
+    </script>
+
+    <style>
+    table,td,th{
+        border: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+<form>
+ชื่อลูกค้า:
+<input type="text" id="name"> <br>
+ที่อยู่:
+<input type="text" id="address"> <br>
+โทรศัพท์:
+<input type="tel" id="phone"><br>
+<input type="button" id ="addButton"value="Add" onclick="inform()">
+</form>
+<br><br>
+
+<table id="playlist">
+    <tr>
+        <th>ชื่อลูกค้า</th>
+        <th>ที่อยู่</th>
+        <th>โทรศัพท์</th>
+    </tr>
+</table>
+
+</body>
+</html>
